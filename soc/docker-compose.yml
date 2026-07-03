@@ -1,0 +1,21 @@
+services:
+  suricata:
+    image: jasonish/suricata:latest
+    container_name: suricata
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_NICE
+    volumes:
+      - ./suricata/logs:/var/log/suricata
+    command: -i enp2s0
+
+  log-collector:
+    image: python:3.11
+    container_name: ubuntu-log-collector
+    volumes:
+      - ./suricata/logs:/logs
+      - ./collector:/app
+    working_dir: /app
+    command: python collector.py
