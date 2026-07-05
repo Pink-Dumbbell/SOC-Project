@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini SOC Target Server</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top left, #1e3a8a, #020617 45%, #000 100%);
+      color: #e5e7eb;
+    }
+
+    .wrap {
+      min-height: 100vh;
+      padding: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .panel {
+      width: 1080px;
+      background: rgba(15, 23, 42, 0.94);
+      border: 1px solid #334155;
+      border-radius: 24px;
+      padding: 42px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.55);
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: flex-start;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 28px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #0f766e;
+      color: #ccfbf1;
+      font-weight: bold;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 46px;
+      color: #38bdf8;
+      letter-spacing: -1px;
+    }
+
+    .sub {
+      margin-top: 14px;
+      color: #94a3b8;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .role {
+      min-width: 280px;
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .role h3 {
+      margin-top: 0;
+      color: #facc15;
+    }
+
+    .role p {
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 34px 0;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 20px;
+      min-height: 110px;
+    }
+
+    .card small {
+      color: #94a3b8;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .ok {
+      color: #22c55e;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .ready {
+      color: #facc15;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section h2 {
+      color: #e2e8f0;
+      margin-bottom: 14px;
+    }
+
+    .flow {
+      background: #020617;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 20px;
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+
+    .logs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .logbox {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 16px;
+      color: #cbd5e1;
+    }
+
+    code {
+      color: #93c5fd;
+      word-break: break-all;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .secondary {
+      background: #1e293b;
+      color: #cbd5e1;
+      border: 1px solid #475569;
+    }
+
+    .footer {
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid #334155;
+      color: #64748b;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel">
+
+      <div class="top">
+        <div>
+          <div class="badge">Rocky Linux Target Server</div>
+          <h1>Mini SOC Project</h1>
+          <p class="sub">
+            공격 트래픽과 시스템 로그를 발생시키는 취약 서버입니다.<br>
+            웹 공격, SSH 인증 시도, FTP 접근, 시스템 변경 이벤트를 생성하고 Wazuh/SOC 환경으로 연동합니다.
+          </p>
+        </div>
+
+        <div class="role">
+          <h3>Target Role</h3>
+          <p>
+            Web Attack Log<br>
+            SSH Authentication Log<br>
+            FTP Access Log<br>
+            Audit Event Source
+          </p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card"><small>Apache / PHP</small><div class="ok">Running</div></div>
+        <div class="card"><small>DVWA</small><div class="ok">Running</div></div>
+        <div class="card"><small>MariaDB</small><div class="ok">Running</div></div>
+        <div class="card"><small>Docker</small><div class="ok">Active</div></div>
+
+        <div class="card"><small>SSH</small><div class="ok">Enabled</div></div>
+        <div class="card"><small>FTP / vsftpd</small><div class="ok">Enabled</div></div>
+        <div class="card"><small>auditd</small><div class="ok">Enabled</div></div>
+        <div class="card"><small>Wazuh Agent</small><div class="ready">Ready</div></div>
+      </div>
+
+      <div class="section">
+        <h2>Detection Scenario</h2>
+        <div class="flow">
+          Kali Attack → Rocky Target Server → Logs 생성 → Wazuh Agent 수집 → Wazuh Manager / Dashboard 분석
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Log Sources</h2>
+        <div class="logs">
+          <div class="logbox">Apache Access Log<br><code>apache/logs/access.log</code></div>
+          <div class="logbox">SSH Authentication Log<br><code>/var/log/secure</code></div>
+          <div class="logbox">FTP Log<br><code>/var/log/vsftpd.log</code></div>
+          <div class="logbox">auditd Log<br><code>/var/log/audit/audit.log</code></div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="/dvwa/">Open DVWA</a>
+        <a class="btn secondary" href="/info.php">PHP Info</a>
+      </div>
+
+      <div class="footer">
+        Target Server: Apache · DVWA · SSH · FTP · auditd · Wazuh Agent Ready
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

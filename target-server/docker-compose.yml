@@ -1,0 +1,22 @@
+services:
+  web:
+    build: ./web
+    container_name: target-web
+    ports:
+      - "80:80"
+    volumes:
+      - ./apache/html:/var/www/html
+      - ./apache/logs:/var/log/apache2
+    restart: unless-stopped
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:11
+    container_name: target-db
+    environment:
+      MYSQL_ROOT_PASSWORD: qhdks12
+      MYSQL_DATABASE: dvwa
+      MYSQL_USER: dvwa
+      MYSQL_PASSWORD: qhdks12
+    restart: unless-stopped
