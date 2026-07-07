@@ -1,7 +1,7 @@
 services:
   suricata:
     image: jasonish/suricata:latest
-    container_name: suricata
+    container_name: ubuntu-suricata
     network_mode: host
     cap_add:
       - NET_ADMIN
@@ -9,13 +9,6 @@ services:
       - SYS_NICE
     volumes:
       - ./suricata/logs:/var/log/suricata
-    command: -i enp2s0
-
-  log-collector:
-    image: python:3.11
-    container_name: ubuntu-log-collector
-    volumes:
-      - ./suricata/logs:/logs
-      - ./collector:/app
-    working_dir: /app
-    command: python collector.py
+      - ./suricata/rules/local.rules:/etc/suricata/rules/local.rules
+    command: -i enp2s0 -S /etc/suricata/rules/local.rules
+    restart: unless-stopped
