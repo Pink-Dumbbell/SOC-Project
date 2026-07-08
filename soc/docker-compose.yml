@@ -12,3 +12,16 @@ services:
       - ./suricata/rules/local.rules:/etc/suricata/rules/local.rules
     command: -i enp2s0 -S /etc/suricata/rules/local.rules
     restart: unless-stopped
+services:
+  wazuh-agent:
+    image: wazuh/wazuh-agent:latest
+    container_name: wazuh-agent
+    hostname: ubuntu1-security-gateway
+    network_mode: host
+    restart: unless-stopped
+    environment:
+      - WAZUH_MANAGER=10.30.30.20
+      - WAZUH_AGENT_NAME=ubuntu1-security-gateway
+    volumes:
+      - ./ossec.conf:/var/ossec/etc/ossec.conf
+      - /home/$USER/soc/suricata/logs:/suricata/logs:ro
