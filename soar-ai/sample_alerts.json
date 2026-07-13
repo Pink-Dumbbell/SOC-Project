@@ -1,0 +1,6 @@
+{"rule":{"id":"31103","description":"Web Application Attack SQL Injection","level":12},"agent":{"name":"rocky"},"data":{"srcip":"10.20.20.100"},"full_log":"GET /DVWA/vulnerabilities/sqli/?id=1' OR '1'='1"}
+{"rule":{"id":"31104","description":"Web Application Attack XSS","level":10},"agent":{"name":"rocky"},"data":{"srcip":"10.20.20.101"},"full_log":"<script>alert(1)</script>"}
+{"rule":{"id":"31105","description":"Directory Traversal Attempt","level":10},"agent":{"name":"rocky"},"data":{"srcip":"10.20.20.102"},"full_log":"GET /DVWA/../../../../etc/passwd"}
+{"rule":{"id":"31106","description":"Command Injection Detected","level":12},"agent":{"name":"rocky"},"data":{"srcip":"10.20.20.103"},"full_log":"; cat /etc/passwd"}
+{"rule":{"id":"31107","description":"Multiple Failed Login Brute Force","level":10},"agent":{"name":"rocky"},"data":{"srcip":"10.20.20.104"},"full_log":"POST /login username=admin password=admin123"}{"rule":{"id":"31108","description":"Web Application Attack SQL Injection"},"agent":{"name":"rocky"},"data":{"srcip":"10.20.20.200"},"full_log":"GET /DVWA?id=99 UNION SELECT username,password FROM users--"}
+{"rule":{"id":"31108","description":"Web Application Attack SQL Injection"},"agent":{"name":"rocky"},"data":{"srcip":"10.20.20.200"},"full_log":"GET /DVWA?id=99 UNION SELECT username,password FROM users--"}
