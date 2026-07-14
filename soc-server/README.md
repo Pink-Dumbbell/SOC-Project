@@ -67,3 +67,4 @@ chmod +x ~/Desktop/*.desktop
 
 gio set ~/Desktop/wazuh.desktop metadata::trusted true
 gio set ~/Desktop/spiderfoot.desktop metadata::trusted true
+gio set ~/Desktop/soar-ai.desktop metadata::trusted true
