@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
-from response import generate_block_command, should_block, execute_block_on_gateway
+from response import should_block, temp_block_ip
 
 app = FastAPI()
 
@@ -20,15 +20,11 @@ def analyze_alert(alert: AlertLog):
     predicted_label = model.predict(X)[0]
 
     if should_block(predicted_label):
-        command = generate_block_command(alert.src_ip)
-        result = execute_block_on_gateway(command)   # ← 실제 실행 추가!
-
+        status = temp_block_ip(alert.src_ip)
         return {
             "src_ip": alert.src_ip,
             "predicted_attack": predicted_label,
-            "action": "block",
-            "command": command,
-            "execution_result": result,
+            "action": status,   # "new_block_started" 또는 "already_blocked"
         }
     else:
         return {
