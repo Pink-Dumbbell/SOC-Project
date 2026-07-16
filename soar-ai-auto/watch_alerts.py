@@ -27,7 +27,10 @@ def send_to_soar(src_ip: str, full_log: str):
     try:
         response = requests.post(SOAR_API_URL, json=payload, timeout=5)
         result = response.json()
-        print(f"[분석 결과] {result}")
+        print("[AI 분석 결과]")
+        print(f"공격 유형 : {result['predicted_attack']}")
+        print(f"대응 결과 : {result['action']}")
+        print("=" * 60)
     except requests.exceptions.RequestException as e:
         print(f"[에러] SOAR 서버 요청 실패: {e}")
 
@@ -47,9 +50,18 @@ def main():
                 continue
 
             src_ip = log.get("data", {}).get("src_ip", "unknown")
+            # IPv6는 자동 차단 대상에서 제외
+            if ":" in src_ip:
+                continue
+            rule = log.get("rule", {}).get("description", "Unknown")
             full_log = json.dumps(log, ensure_ascii=False)
 
-            print(f"\n[새 Alert 발견] src_ip={src_ip}, full_log={full_log}")
+            print("\n" + "=" * 60)
+            print("[새 Alert 수신]")
+            print(f"공격 IP : {src_ip}")
+            print(f"Rule    : {rule}")
+            print("=" * 60)
+
             send_to_soar(src_ip, full_log)
 
 
