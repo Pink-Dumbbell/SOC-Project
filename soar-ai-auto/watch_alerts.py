@@ -62,7 +62,7 @@ def main():
             
             print_alert(current_time, src_ip, rule)
             
-            send_to_soar(src_ip, full_log)
+            send_to_soar(src_ip, full_log, rule)
 
 
 if __name__ == "__main__":

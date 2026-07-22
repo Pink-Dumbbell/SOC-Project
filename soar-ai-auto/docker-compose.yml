@@ -2,10 +2,11 @@ services:
   soar:
     build: .
     container_name: soar-ai-auto
+
     ports:
       - "8000:8000"
 
     volumes:
-      - /var/lib/docker/volumes/single-node_wazuh_logs/_data:/var/ossec/logs:ro
+      - /var/lib/docker/volumes/soc-server_wazuh_logs/_data:/var/ossec/logs:ro
 
     restart: unless-stopped

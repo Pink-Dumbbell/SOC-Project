@@ -12,11 +12,11 @@ app = FastAPI()
 class AlertLog(BaseModel):
     src_ip: str
     full_log: str
-
+    rule_description: str
 
 @app.post("/analyze")
 def analyze_alert(alert: AlertLog):
-    predicted_label = predict_attack(alert.full_log)
+    predicted_label = predict_attack(alert.rule_description)
     info = get_attack_info(predicted_label)
 
     risk = info["risk"]

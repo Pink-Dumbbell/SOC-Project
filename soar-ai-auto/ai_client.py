@@ -2,9 +2,8 @@ import requests
 from config import SOAR_API_URL
 from console import print_ai_result
 
-
-def send_to_soar(src_ip: str, full_log: str):
-    payload = {"src_ip": src_ip, "full_log": full_log}
+def send_to_soar(src_ip: str, full_log: str, rule_description: str):
+    payload = {"src_ip": src_ip, "full_log": full_log, "rule_description": rule_description}
 
     try:
         response = requests.post(SOAR_API_URL, json=payload, timeout=5)
