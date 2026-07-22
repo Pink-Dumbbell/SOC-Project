@@ -2,6 +2,7 @@ import paramiko
 import threading
 import time
 from soar.policy import POLICY
+from datetime import datetime
 
 # Ubuntu1 Gateway 서버 접속 정보
 GATEWAY_HOST = "10.30.30.1"       # Ubuntu1 Gateway의 실제 IP
@@ -46,6 +47,8 @@ PROTECTED_IPS = {
     }
 # 지금 차단 중인 IP들을 기억해두는 목록 (중복 차단 방지용)
 blocked_ips = set()
+block_tokens = {}
+pending_approvals = {}   # 승인 대기 중인 영구 차단 요청
 lock = threading.Lock()
 
 

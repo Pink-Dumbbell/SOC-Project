@@ -1,5 +1,10 @@
-#새로 추가된 코드
-#blocked_ips     (set)지금 차단 중인 IP 목록을 기억
-#lock    여러 요청이 동시에 들어와도 안전하게 목록을 확인/수정하기 위한 안전장치
-#temp_block_ip()    이미 차단 중이면 "already_blocked" 반환하고 끝, 아니면 새로 차단 걸고 10초 후 자동 해제 스레드 시작
-#threading.Thread(daemon=True)  10초 기다리는 동안 서버 전체가 멈추지 않게, 백그라운드에서 따로 처리
+#영구 차단 위험도를 가진 공격이 들어올 시 관리자 승인받는 구조 수정
+
+공격 탐지 → policy.py에서 "permanent"면
+   ↓
+blocker.py: 즉시 차단 안 하고 "승인 대기 목록"에만 등록
+   ↓
+[새 파일] admin_console.py: 주기적으로 대기 목록 확인 → 관리자한테 y/n 물어봄
+   ↓
+y → main.py의 /approve 호출 → 그제서야 진짜 SSH 차단 실행
+n → /reject 호출 → 아무 일도 안 일어남
