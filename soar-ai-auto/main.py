@@ -3,7 +3,13 @@ from pydantic import BaseModel
 from ai.classifier import predict_attack
 from ai.risk import get_attack_info
 from ai.correlate import record_event, build_incident
-from soar.blocker import should_block, temp_block_ip
+from soar.blocker import (
+    should_block,
+    temp_block_ip,
+    approve_permanent_block,
+    reject_permanent_block,
+    get_pending_approvals,
+)
 from soar.playbook import get_playbook
 from soar.logger import log_action, get_logs
 
@@ -14,6 +20,11 @@ class AlertLog(BaseModel):
     src_ip: str
     full_log: str
     rule_description: str
+
+
+class IPRequest(BaseModel):
+    src_ip: str
+
 
 @app.post("/analyze")
 def analyze_alert(alert: AlertLog):
@@ -88,9 +99,24 @@ def analyze_alert(alert: AlertLog):
             "incident": incident,
         }
 
+
+@app.get("/pending-approvals")
+def pending_approvals():
+    return get_pending_approvals()
+
+
+@app.post("/approve")
+def approve(request: IPRequest):
+    return approve_permanent_block(request.src_ip)
+
+
+@app.post("/reject")
+def reject(request: IPRequest):
+    return reject_permanent_block(request.src_ip)
+
+
 @app.get("/history")
 def history():
-
     return {
         "history": get_logs()
     }
