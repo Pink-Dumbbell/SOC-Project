@@ -67,3 +67,15 @@ chmod +x ~/Desktop/*.desktop
 
 gio set ~/Desktop/wazuh.desktop metadata::trusted true
 gio set ~/Desktop/spiderfoot.desktop metadata::trusted true
+
+
+-------------------------------------------------------------------
+
+
+차단 아이콘 만들기 
+
+chmod +x /home/soc/SOC-Project/soc-server/desktop/soar-admin.desktop
+
+cp /home/soc/SOC-Project/soc-server/desktop/soar-admin.desktop /home/soc/Desktop/
+
+chmod +x /home/soc/Desktop/soar-admin.desktop

@@ -6,15 +6,18 @@ from config import ALERTS_FILE, CHECK_INTERVAL_SECONDS
 from ai_client import send_to_soar
 from console import print_alert
 
+# AI 분석이 필요 없는 이벤트(노이즈)
+IGNORE_RULES = {
+    "Suricata: Alert - SOC HTTP Access Detected",
+    "Suricata: Alert - SOC SSH Scan Detected",
+}
+
 def follow(file):
     """파일 끝에서부터 계속 새로 추가되는 줄만 읽어오는 함수 (tail -f 같은 동작)"""
     file.seek(0, 2)  # 파일 맨 끝으로 이동 (기존 내용은 무시하고, 새로 추가되는 것만 봄)
 
     while True:
         line = file.readline()
-
-        if line:
-            print("DEBUG:", line)
 
         if not line:
             time.sleep(CHECK_INTERVAL_SECONDS)
@@ -54,12 +57,14 @@ def main():
 
             if not rule:
                 rule = "Unknown"
+
+            if rule in IGNORE_RULES:
+                continue
+
             full_log = json.dumps(log, ensure_ascii=False)
 
             current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
            
-            print(log)
-            
             print_alert(current_time, src_ip, rule)
             
             send_to_soar(src_ip, full_log, rule)

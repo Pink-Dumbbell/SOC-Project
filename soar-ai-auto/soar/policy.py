@@ -1,7 +1,6 @@
 POLICY = {
     "sql_injection": {
-        "action": "temporary",
-        "duration": 3600,
+        "action": "permanent",
     },
     "xss": {
         "action": "temporary",
