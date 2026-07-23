@@ -18,6 +18,14 @@ def print_ai_result(result):
     print(f"Risk      : {result['risk']}")
     print(f"Playbook  : {result['playbook']}")
 
+    incident = result.get("incident")
+    if incident and incident.get("is_multi_stage"):
+        print("\n[상관분석 결과]")
+        print(f"Incident ID   : {incident['incident_id']}")
+        print(f"Attack Flow   : {' -> '.join(incident['attack_flow'])}")
+        print(f"Stage         : {incident['stage']}")
+        print(f"Incident Risk : {incident['risk_score']}/100")
+
     print("\nPlaybook")
     print("-" * 40)
 

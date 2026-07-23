@@ -47,7 +47,6 @@ PROTECTED_IPS = {
     }
 # 지금 차단 중인 IP들을 기억해두는 목록 (중복 차단 방지용)
 blocked_ips = set()
-block_tokens = {}
 pending_approvals = {}   # 승인 대기 중인 영구 차단 요청
 lock = threading.Lock()
 
@@ -142,10 +141,22 @@ def temp_block_ip(src_ip: str, predicted_label: str) -> str:
 
     with lock:
         if src_ip in blocked_ips:
-            # 이미 차단 규칙이 걸려있으니 새로 걸 필요 없음
             return "already_blocked"
+        if src_ip in pending_approvals:
+            return "already_pending_approval"
+
+    # 영구 차단은 바로 실행하지 않고 승인 대기 상태로만 등록
+    if action == "permanent":
+        with lock:
+            pending_approvals[src_ip] = {
+                "predicted_label": predicted_label,
+                "requested_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            }
+        print(f"[승인 대기] {src_ip} - 영구 차단 요청됨 (공격: {predicted_label})")
+        return "permanent_pending_approval"
+
     block_command = generate_block_command(src_ip)
-    result = execute_block_on_gateway(block_command)   
+    result = execute_block_on_gateway(block_command)
     
     if not result["success"]:
         print(f"[차단 실패] {result}")
@@ -163,9 +174,6 @@ def temp_block_ip(src_ip: str, predicted_label: str) -> str:
          f"결과={result}"
     )
 
-    if action == "permanent":
-        return "permanent_block_started"
-    # 정책에 정의된 시간(duration) 후 자동 해제
     def release_after_delay():
         time.sleep(duration)
         unblock_command = generate_unblock_command(src_ip)
@@ -177,3 +185,36 @@ def temp_block_ip(src_ip: str, predicted_label: str) -> str:
     threading.Thread(target=release_after_delay, daemon=True).start()
 
     return f"{action}_block_started"
+
+def approve_permanent_block(src_ip: str) -> dict:
+    """관리자가 승인하면 그제서야 실제로 iptables 영구 차단을 실행한다."""
+    with lock:
+        if src_ip not in pending_approvals:
+            return {"success": False, "message": "승인 대기 중인 요청이 없습니다."}
+
+    result = execute_block_on_gateway(generate_block_command(src_ip))
+
+    with lock:
+        pending_approvals.pop(src_ip, None)
+        if result["success"]:
+            blocked_ips.add(src_ip)
+
+    print(f"[영구 차단 승인 완료] {src_ip} - {result}")
+    return {"success": result["success"], "message": result["message"]}
+
+
+def reject_permanent_block(src_ip: str) -> dict:
+    """관리자가 거부하면 요청만 취소하고 실제 차단은 하지 않는다."""
+    with lock:
+        if src_ip not in pending_approvals:
+            return {"success": False, "message": "승인 대기 중인 요청이 없습니다."}
+        pending_approvals.pop(src_ip, None)
+
+    print(f"[영구 차단 거부] {src_ip}")
+    return {"success": True, "message": "요청이 거부되었습니다."}
+
+
+def get_pending_approvals() -> dict:
+    """지금 승인 기다리고 있는 요청 목록 반환."""
+    with lock:
+        return dict(pending_approvals)
