@@ -1,0 +1,2 @@
+{"timestamp": "2026-07-19T10:01:00+09:00", "event_type": "alert", "src_ip": "10.20.20.100", "dest_ip": "10.20.20.10", "alert": {"signature": "ET SCAN Nmap Scan Detected", "category": "Attempted Information Leak"}}
+{"timestamp": "2026-07-19T10:03:00+09:00", "event_type": "alert", "src_ip": "10.20.20.100", "dest_ip": "10.20.20.10", "alert": {"signature": "ET WEB_SERVER SQL Injection Attempt", "category": "Web Application Attack"}}

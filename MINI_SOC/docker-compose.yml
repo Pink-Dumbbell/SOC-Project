@@ -1,0 +1,15 @@
+services:
+  mini-soc-ai:
+    build: .
+    container_name: mini-soc-ai
+    environment:
+      # 실제 로그 경로로 바꾸려면 여기 수정 (Wazuh Manager 볼륨 마운트 등)
+      - SURICATA_LOG_PATH=sample_logs/suricata_eve.json
+      - WAZUH_LOG_PATH=sample_logs/wazuh_alerts.json
+      - RISK_BLOCK_THRESHOLD=90
+      - CORRELATION_WINDOW_MIN=10
+      - DRY_RUN_BLOCK=true        # 실전 배포 시 false로 변경
+      # - SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxx  # 실제 알림 받으려면 주석 해제
+    volumes:
+      # 로컬/실제 Suricata·Wazuh 로그 파일을 컨테이너 안으로 마운트하고 싶을 때 사용
+      - ./sample_logs:/app/sample_logs:ro

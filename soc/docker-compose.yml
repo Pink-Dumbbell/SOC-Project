@@ -1,7 +1,7 @@
 services:
   suricata:
     image: jasonish/suricata:latest
-    container_name: suricata
+    container_name: ubuntu1-suricata
     network_mode: host
     cap_add:
       - NET_ADMIN
@@ -9,13 +9,19 @@ services:
       - SYS_NICE
     volumes:
       - ./suricata/logs:/var/log/suricata
-    command: -i enp2s0
+      - ./suricata/rules/local.rules:/etc/suricata/rules/local.rules
+    command: -i enp2s0 -S /etc/suricata/rules/local.rules
+    restart: unless-stopped
 
-  log-collector:
-    image: python:3.11
-    container_name: ubuntu-log-collector
+  wazuh-agent:
+    image: wazuh/wazuh-agent:4.14.6
+    container_name: ubuntu1-wazuh-agent
+    hostname: ubuntu1-security-gateway
+    network_mode: host
+    restart: unless-stopped
+    environment:
+      - WAZUH_MANAGER_SERVER=${WAZUH_MANAGER_IP:-10.30.30.10}
+      - WAZUH_AGENT_NAME=ubuntu1-security-gateway
     volumes:
-      - ./suricata/logs:/logs
-      - ./collector:/app
-    working_dir: /app
-    command: python collector.py
+      - ./wazuh-agent/ossec.conf:/wazuh-config-mount/etc/ossec.conf:ro
+      - ./suricata/logs:/suricata/logs:ro
