@@ -2,14 +2,24 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Mini SOC Target Server</title>
+
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top left, #1e3a8a, #020617 45%, #000 100%);
+      background: radial-gradient(
+        circle at top left,
+        #1e3a8a,
+        #020617 45%,
+        #000 100%
+      );
       color: #e5e7eb;
     }
 
@@ -27,7 +37,7 @@
       border: 1px solid #334155;
       border-radius: 24px;
       padding: 42px;
-      box-shadow: 0 24px 70px rgba(0,0,0,.55);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
     }
 
     .top {
@@ -79,7 +89,7 @@
 
     .role p {
       color: #cbd5e1;
-      line-height: 1.6;
+      line-height: 1.7;
       margin-bottom: 0;
     }
 
@@ -134,6 +144,32 @@
       line-height: 1.8;
     }
 
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .service-box {
+      background: #020617;
+      border: 1px solid #1e293b;
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .service-box h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #38bdf8;
+    }
+
+    .service-box p {
+      margin: 0;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+
     .logs {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -156,6 +192,7 @@
 
     .actions {
       display: flex;
+      flex-wrap: wrap;
       gap: 14px;
       margin-top: 28px;
     }
@@ -166,11 +203,22 @@
       border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
     }
 
     .primary {
       background: #2563eb;
       color: white;
+    }
+
+    .juice {
+      background: #f59e0b;
+      color: #111827;
     }
 
     .secondary {
@@ -185,27 +233,80 @@
       border-top: 1px solid #334155;
       color: #64748b;
       font-size: 14px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .wrap {
+        padding: 20px;
+      }
+
+      .panel {
+        width: 100%;
+        padding: 28px;
+      }
+
+      .top {
+        flex-direction: column;
+      }
+
+      .role {
+        width: 100%;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .services,
+      .logs {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        text-align: center;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="panel">
 
       <div class="top">
         <div>
-          <div class="badge">Rocky Linux Target Server</div>
+          <div class="badge">Rocky Linux DMZ Target Server</div>
+
           <h1>Mini SOC Project</h1>
+
           <p class="sub">
-            공격 트래픽과 시스템 로그를 발생시키는 취약 서버입니다.<br>
-            웹 공격, SSH 인증 시도, FTP 접근, 시스템 변경 이벤트를 생성하고 Wazuh/SOC 환경으로 연동합니다.
+            공격 트래픽과 시스템 로그를 발생시키는 DMZ 취약 서버입니다.<br>
+            DVWA와 OWASP Juice Shop을 이용해 웹 공격 이벤트를 생성하고,
+            SSH·FTP·auditd 로그를 Wazuh/SOC 환경으로 전송합니다.
           </p>
         </div>
 
         <div class="role">
           <h3>Target Role</h3>
+
           <p>
-            Web Attack Log<br>
+            Traditional Web Attack<br>
+            Modern Web / API Attack<br>
             SSH Authentication Log<br>
             FTP Access Log<br>
             Audit Event Source
@@ -214,41 +315,143 @@
       </div>
 
       <div class="grid">
-        <div class="card"><small>Apache / PHP</small><div class="ok">Running</div></div>
-        <div class="card"><small>DVWA</small><div class="ok">Running</div></div>
-        <div class="card"><small>MariaDB</small><div class="ok">Running</div></div>
-        <div class="card"><small>Docker</small><div class="ok">Active</div></div>
+        <div class="card">
+          <small>Apache / PHP</small>
+          <div class="ok">Running</div>
+        </div>
 
-        <div class="card"><small>SSH</small><div class="ok">Enabled</div></div>
-        <div class="card"><small>FTP / vsftpd</small><div class="ok">Enabled</div></div>
-        <div class="card"><small>auditd</small><div class="ok">Enabled</div></div>
-        <div class="card"><small>Wazuh Agent</small><div class="ready">Ready</div></div>
+        <div class="card">
+          <small>DVWA</small>
+          <div class="ok">Running</div>
+        </div>
+
+        <div class="card">
+          <small>OWASP Juice Shop</small>
+          <div class="ok">Running</div>
+        </div>
+
+        <div class="card">
+          <small>MariaDB</small>
+          <div class="ok">Running</div>
+        </div>
+
+        <div class="card">
+          <small>Docker</small>
+          <div class="ok">Active</div>
+        </div>
+
+        <div class="card">
+          <small>SSH</small>
+          <div class="ok">Enabled</div>
+        </div>
+
+        <div class="card">
+          <small>FTP / vsftpd</small>
+          <div class="ok">Enabled</div>
+        </div>
+
+        <div class="card">
+          <small>auditd / Wazuh Agent</small>
+          <div class="ready">Ready</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Vulnerable Applications</h2>
+
+        <div class="services">
+          <div class="service-box">
+            <h3>DVWA</h3>
+            <p>
+              SQL Injection, XSS, Command Injection, File Upload,
+              Brute Force 등 전통적인 웹 취약점 실습 환경입니다.
+            </p>
+          </div>
+
+          <div class="service-box">
+            <h3>OWASP Juice Shop</h3>
+            <p>
+              REST API, 인증 우회, JWT, 접근 제어,
+              클라이언트 기반 공격 등 현대적인 웹 애플리케이션 실습 환경입니다.
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="section">
         <h2>Detection Scenario</h2>
+
         <div class="flow">
-          Kali Attack → Rocky Target Server → Logs 생성 → Wazuh Agent 수집 → Wazuh Manager / Dashboard 분석
+          Kali Attack
+          → Ubuntu1 Security Gateway
+          → iptables DNAT / Suricata Detection
+          → Rocky Target Server
+          → 로그 생성
+          → Wazuh Agent 수집
+          → Wazuh Manager / Dashboard 분석
+          → AI 대응 정책 추천
         </div>
       </div>
 
       <div class="section">
         <h2>Log Sources</h2>
+
         <div class="logs">
-          <div class="logbox">Apache Access Log<br><code>apache/logs/access.log</code></div>
-          <div class="logbox">SSH Authentication Log<br><code>/var/log/secure</code></div>
-          <div class="logbox">FTP Log<br><code>/var/log/vsftpd.log</code></div>
-          <div class="logbox">auditd Log<br><code>/var/log/audit/audit.log</code></div>
+          <div class="logbox">
+            Apache Access Log<br>
+            <code>apache/logs/access.log</code>
+          </div>
+
+          <div class="logbox">
+            Juice Shop Container Log<br>
+            <code>docker logs target-juice-shop</code>
+          </div>
+
+          <div class="logbox">
+            SSH Authentication Log<br>
+            <code>/var/log/secure</code>
+          </div>
+
+          <div class="logbox">
+            FTP Log<br>
+            <code>/var/log/vsftpd.log</code>
+          </div>
+
+          <div class="logbox">
+            auditd Log<br>
+            <code>/var/log/audit/audit.log</code>
+          </div>
+
+          <div class="logbox">
+            Wazuh Agent Log<br>
+            <code>/var/ossec/logs/ossec.log</code>
+          </div>
         </div>
       </div>
 
       <div class="actions">
-        <a class="btn primary" href="/dvwa/">Open DVWA</a>
-        <a class="btn secondary" href="/info.php">PHP Info</a>
+        <a class="btn primary" href="/dvwa/">
+          Open DVWA
+        </a>
+
+        <a
+          class="btn juice"
+          href="http://soc.target:3000"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Juice Shop
+        </a>
+
+        <a class="btn secondary" href="/info.php">
+          PHP Info
+        </a>
       </div>
 
       <div class="footer">
-        Target Server: Apache · DVWA · SSH · FTP · auditd · Wazuh Agent Ready
+        Target Server:
+        Apache · DVWA · OWASP Juice Shop · MariaDB · SSH · FTP ·
+        auditd · Wazuh Agent
       </div>
 
     </div>
