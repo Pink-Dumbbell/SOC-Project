@@ -1,0 +1,7 @@
+services:
+  soar:
+    build: .
+    container_name: soar-ai
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

