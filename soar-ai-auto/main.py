@@ -9,6 +9,8 @@ from soar.blocker import (
     approve_permanent_block,
     reject_permanent_block,
     get_pending_approvals,
+    list_blocked_ips,
+    unblock_ip,
 )
 from soar.playbook import get_playbook
 from soar.logger import log_action, get_logs
@@ -31,13 +33,11 @@ def analyze_alert(alert: AlertLog):
     predicted_label = predict_attack(alert.rule_description)
     info = get_attack_info(predicted_label)
 
-    # 상관분석: 이번 이벤트 기록 + 같은 IP의 최근 이벤트들을 하나의 Incident로 재구성
     record_event(alert.src_ip, predicted_label)
     incident = build_incident(alert.src_ip)
-
     risk = info["risk"]
     if incident["is_multi_stage"] and risk != "HIGH":
-        risk = "HIGH"   # 여러 Kill Chain 단계를 거친 연속 공격이면 위험도 강제 격상
+        risk = "HIGH"
 
     playbook = info["playbook"]
     recommendation = info["recommendation"]
@@ -55,19 +55,8 @@ def analyze_alert(alert: AlertLog):
     print(f"[권장조치] {recommendation}")
 
     if should_block(predicted_label):
-        status = temp_block_ip(
-            alert.src_ip,
-            predicted_label
-        )
-
-        log_action(
-            alert.src_ip,
-            predicted_label,
-            risk,
-            playbook,
-            status
-        )
-
+        status = temp_block_ip(alert.src_ip, predicted_label)
+        log_action(alert.src_ip, predicted_label, risk, playbook, status)
         return {
             "src_ip": alert.src_ip,
             "predicted_attack": predicted_label,
@@ -79,15 +68,7 @@ def analyze_alert(alert: AlertLog):
             "incident": incident,
         }
     else:
-
-        log_action(
-            alert.src_ip,
-            predicted_label,
-            risk,
-            playbook,
-            "none"
-         )
-
+        log_action(alert.src_ip, predicted_label, risk, playbook, "none")
         return {
             "src_ip": alert.src_ip,
             "predicted_attack": predicted_label,
@@ -115,8 +96,16 @@ def reject(request: IPRequest):
     return reject_permanent_block(request.src_ip)
 
 
+@app.get("/blocked-ips")
+def blocked_ips_list():
+    return list_blocked_ips()
+
+
+@app.post("/unblock")
+def unblock(request: IPRequest):
+    return unblock_ip(request.src_ip)
+
+
 @app.get("/history")
 def history():
-    return {
-        "history": get_logs()
-    }
+    return {"history": get_logs()}

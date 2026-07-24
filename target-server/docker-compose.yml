@@ -19,4 +19,41 @@ services:
       MYSQL_DATABASE: dvwa
       MYSQL_USER: dvwa
       MYSQL_PASSWORD: qhdks12
+    volumes:
+      - db_data:/var/lib/mysql
     restart: unless-stopped
+
+  juice-shop:
+    image: bkimminich/juice-shop:latest
+    container_name: target-juice-shop
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+  wazuh-agent:
+    image: wazuh/wazuh-agent:4.14.6
+    container_name: rocky-target-wazuh-agent
+    hostname: rocky-target
+    network_mode: host
+    restart: unless-stopped
+
+    environment:
+      - WAZUH_MANAGER_SERVER=10.30.30.10
+      - WAZUH_REGISTRATION_SERVER=10.30.30.10
+      - WAZUH_AGENT_NAME=rocky-target
+
+    volumes:
+      - ./wazuh-agent/ossec.conf:/wazuh-config-mount/etc/ossec.conf:ro
+
+      # Rocky 호스트 로그
+      - /var/log:/host/var/log:ro
+
+      # FIM 대상
+      - /etc:/host/etc:ro
+      - ./apache/html:/host/web-files:ro
+
+      # DVWA Apache 로그
+      - ./apache/logs:/apache-logs:ro
+
+volumes:
+  db_data:

@@ -45,7 +45,8 @@ def main():
                 continue
 
             src_ip = (
-                log.get("data", {}).get("src_ip")
+                log.get("data", {}).get("srcip")
+                or log.get("data", {}).get("src_ip")
                 or log.get("srcip")
                 or log.get("agent", {}).get("ip")
                 or "unknown"
