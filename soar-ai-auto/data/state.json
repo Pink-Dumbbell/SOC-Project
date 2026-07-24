@@ -1,0 +1,9 @@
+{
+  "blocked_ips": {},
+  "pending_approvals": {
+    "192.168.187.140": {
+      "predicted_label": "sql_injection",
+      "requested_at": "2026-07-24 07:22:49"
+    }
+  }
+}
