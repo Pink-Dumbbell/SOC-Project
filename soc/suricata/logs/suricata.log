@@ -229,3 +229,1136 @@
 [1 - Suricata-Main] 2026-07-07 12:01:14 Info: runmodes: enp2s0: creating 2 threads
 [21 - W#01-enp2s0] 2026-07-07 12:01:14 Info: ioctl: enp2s0: MTU 1500
 [1 - Suricata-Main] 2026-07-07 12:01:14 Notice: threads: Threads created -> W: 2 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-10 08:45:25 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: detect: 3 signatures processed. 2 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-10 08:45:25 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-10 08:45:25 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-10 08:45:25 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-10 08:45:26 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-13 05:03:26 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-13 05:03:26 Info: suricata: time elapsed 245880.609s
+[1 - Suricata-Main] 2026-07-13 05:03:27 Info: counters: Alerts: 24
+[1 - Suricata-Main] 2026-07-13 05:03:27 Notice: device: enp2s0: packets: 164209, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-13 05:03:34 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: detect: 3 signatures processed. 2 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-13 05:03:34 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-13 05:03:34 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-13 05:03:34 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-13 05:03:34 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-13 05:22:03 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-13 05:22:03 Info: suricata: time elapsed 1109.434s
+[1 - Suricata-Main] 2026-07-13 05:22:04 Info: counters: Alerts: 8
+[1 - Suricata-Main] 2026-07-13 05:22:05 Notice: device: enp2s0: packets: 55006, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-13 05:22:29 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: detect: 3 signatures processed. 2 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-13 05:22:29 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-13 05:22:29 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-13 05:22:29 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-13 05:22:29 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-13 06:12:11 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-13 06:12:12 Info: suricata: time elapsed 2983.019s
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: counters: Alerts: 30
+[1 - Suricata-Main] 2026-07-13 06:12:13 Notice: device: enp2s0: packets: 523564, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-13 06:12:13 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: detect: 3 signatures processed. 2 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-13 06:12:13 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-13 06:12:13 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-13 06:12:13 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-13 06:12:14 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-13 06:22:16 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-13 06:22:17 Info: suricata: time elapsed 603.358s
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: counters: Alerts: 3
+[1 - Suricata-Main] 2026-07-13 06:22:18 Notice: device: enp2s0: packets: 297, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-13 06:22:18 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: detect: 3 signatures processed. 1 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-13 06:22:18 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-13 06:22:18 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-13 06:22:18 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-13 06:22:18 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-14 05:52:27 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-14 05:52:27 Info: suricata: time elapsed 84609.188s
+[1 - Suricata-Main] 2026-07-14 05:52:28 Info: counters: Alerts: 32
+[1 - Suricata-Main] 2026-07-14 05:52:28 Notice: device: enp2s0: packets: 111912, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-14 05:53:21 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: detect: 3 signatures processed. 1 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-14 05:53:21 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-14 05:53:21 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-14 05:53:21 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-14 05:53:21 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-14 10:06:47 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-14 10:06:48 Info: suricata: time elapsed 15206.894s
+[1 - Suricata-Main] 2026-07-14 10:06:49 Info: counters: Alerts: 11
+[1 - Suricata-Main] 2026-07-14 10:06:49 Notice: device: enp2s0: packets: 13895, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-14 10:18:16 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: detect: 3 signatures processed. 1 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-14 10:18:16 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-14 10:18:16 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-14 10:18:16 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-14 10:18:16 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-14 11:17:53 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-14 11:17:53 Info: suricata: time elapsed 3577.196s
+[1 - Suricata-Main] 2026-07-14 11:17:55 Info: counters: Alerts: 14
+[1 - Suricata-Main] 2026-07-14 11:17:55 Notice: device: enp2s0: packets: 673, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-14 11:26:57 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: detect: 3 signatures processed. 1 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-14 11:26:57 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-14 11:26:57 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-14 11:26:57 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-14 11:26:57 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-14 13:36:57 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-14 13:36:58 Info: suricata: time elapsed 7801.136s
+[1 - Suricata-Main] 2026-07-14 13:36:59 Info: counters: Alerts: 465
+[1 - Suricata-Main] 2026-07-14 13:36:59 Notice: device: enp2s0: packets: 624572, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-14 13:37:10 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: detect: 3 signatures processed. 1 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-14 13:37:10 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-14 13:37:10 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-14 13:37:10 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-14 13:37:10 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-15 00:27:12 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-15 00:27:13 Info: suricata: time elapsed 39003.098s
+[1 - Suricata-Main] 2026-07-15 00:27:14 Info: counters: Alerts: 0
+[1 - Suricata-Main] 2026-07-15 00:27:14 Notice: device: enp2s0: packets: 918, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-15 00:27:56 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: detect: 3 signatures processed. 1 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-15 00:27:56 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-15 00:27:56 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-15 00:27:56 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-15 00:27:56 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-15 00:31:00 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-15 00:31:01 Info: suricata: time elapsed 185.238s
+[1 - Suricata-Main] 2026-07-15 00:31:02 Info: counters: Alerts: 0
+[1 - Suricata-Main] 2026-07-15 00:31:02 Notice: device: enp2s0: packets: 20419, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-15 00:31:43 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: detect: 3 signatures processed. 1 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-15 00:31:43 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-15 00:31:43 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-15 00:31:43 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-15 00:31:44 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-16 06:27:31 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-16 06:27:32 Info: suricata: time elapsed 107748.180s
+[1 - Suricata-Main] 2026-07-16 06:27:33 Info: counters: Alerts: 25
+[1 - Suricata-Main] 2026-07-16 06:27:33 Notice: device: enp2s0: packets: 234075, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-16 07:18:45 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: detect: 3 signatures processed. 1 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-16 07:18:45 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-16 07:18:45 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-16 07:18:45 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-16 07:18:45 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-16 08:05:28 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-16 08:05:29 Info: suricata: time elapsed 2803.900s
+[1 - Suricata-Main] 2026-07-16 08:05:30 Info: counters: Alerts: 16
+[1 - Suricata-Main] 2026-07-16 08:05:30 Notice: device: enp2s0: packets: 11872, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-16 08:05:42 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: detect: 3 signatures processed. 1 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-16 08:05:42 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-16 08:05:42 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-16 08:05:42 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-16 08:05:42 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-16 09:18:01 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-16 09:18:02 Info: suricata: time elapsed 4339.769s
+[1 - Suricata-Main] 2026-07-16 09:18:03 Info: counters: Alerts: 53
+[1 - Suricata-Main] 2026-07-16 09:18:03 Notice: device: enp2s0: packets: 23636, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-16 09:18:19 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-16 09:18:19 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-16 09:18:19 Error: detect: error parsing signature "alert http any any -> any 80 (" from file /etc/suricata/rules/local.rules at line 8
+[1 - Suricata-Main] 2026-07-16 09:18:19 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-16 09:18:19 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 16
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: detect: 1 rule files processed. 3 rules successfully loaded, 2 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: detect: 3 signatures processed. 1 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-16 09:18:19 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-16 09:18:19 Info: runmodes: enp2s0: creating 4 threads
+[20 - W#01-enp2s0] 2026-07-16 09:18:19 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-16 09:18:20 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-16 09:26:03 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-16 09:26:03 Info: suricata: time elapsed 463.994s
+[1 - Suricata-Main] 2026-07-16 09:26:04 Info: counters: Alerts: 31
+[1 - Suricata-Main] 2026-07-16 09:26:04 Notice: device: enp2s0: packets: 59278, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-16 09:26:12 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-16 09:26:12 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-16 09:26:12 Error: detect: error parsing signature "alert http any any -> any 80 (" from file /etc/suricata/rules/local.rules at line 8
+[1 - Suricata-Main] 2026-07-16 09:26:12 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-16 09:26:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 16
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: detect: 1 rule files processed. 2 rules successfully loaded, 2 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: detect: 2 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-16 09:26:12 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-16 09:26:12 Info: runmodes: enp2s0: creating 4 threads
+[22 - W#01-enp2s0] 2026-07-16 09:26:12 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-16 09:26:12 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-16 09:35:37 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-16 09:35:38 Info: suricata: time elapsed 565.701s
+[1 - Suricata-Main] 2026-07-16 09:35:39 Info: counters: Alerts: 0
+[1 - Suricata-Main] 2026-07-16 09:35:39 Notice: device: enp2s0: packets: 55541, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-16 09:35:45 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: detect: 3 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 1 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-16 09:35:45 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-16 09:35:45 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-16 09:35:45 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-16 09:35:45 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[29 - Suricata-Main] 2026-07-19 07:02:24 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[29 - Suricata-Main] 2026-07-19 07:02:24 Info: cpu: CPUs/cores online: 4
+[29 - Suricata-Main] 2026-07-19 07:02:24 Info: suricata: Running suricata under test mode
+[29 - Suricata-Main] 2026-07-19 07:02:24 Info: suricata: Setting engine mode to IDS mode by default
+[29 - Suricata-Main] 2026-07-19 07:02:24 Info: exception-policy: master exception-policy set to: auto
+[29 - Suricata-Main] 2026-07-19 07:02:24 Info: logopenfile: fast output device (regular) initialized: fast.log
+[29 - Suricata-Main] 2026-07-19 07:02:24 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[29 - Suricata-Main] 2026-07-19 07:02:24 Info: logopenfile: stats output device (regular) initialized: stats.log
+[29 - Suricata-Main] 2026-07-19 07:02:24 Info: detect: 1 rule files processed. 3 rules successfully loaded, 0 rules failed, 0 rules skipped
+[29 - Suricata-Main] 2026-07-19 07:02:24 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[29 - Suricata-Main] 2026-07-19 07:02:24 Info: detect: 3 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 1 inspect application layer, 0 are decoder event only
+[29 - Suricata-Main] 2026-07-19 07:02:24 Warning: detect: rule 1000001: SYN-only to port(s) 22:22 w/o direction specified, disabling for toclient direction
+[29 - Suricata-Main] 2026-07-19 07:02:24 Notice: suricata: Configuration provided was successfully loaded. Exiting.
+[1 - Suricata-Main] 2026-07-19 07:04:42 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-19 07:04:43 Info: suricata: time elapsed 250137.875s
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: counters: Alerts: 78
+[1 - Suricata-Main] 2026-07-19 07:04:44 Notice: device: enp2s0: packets: 698166, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-19 07:04:44 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 11
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 19
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 24
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 32
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 37
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 45
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 50
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 58
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 63
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 70
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 74
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 81
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 85
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 92
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 97
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 104
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 109
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 116
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 22 (" from file /etc/suricata/rules/local.rules at line 121
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 129
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [80,3000] (" from file /etc/suricata/rules/local.rules at line 134
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 142
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [21,22,23,25,53,80,110,139,143,443,445,3306,3389,5432,8080] (" from file /etc/suricata/rules/local.rules at line 146
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 154
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert udp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 159
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 165
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert dns any any -> $HOME_NET 53 (" from file /etc/suricata/rules/local.rules at line 169
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 176
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 23 (" from file /etc/suricata/rules/local.rules at line 181
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 188
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 21 (" from file /etc/suricata/rules/local.rules at line 192
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 200
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 3306 (" from file /etc/suricata/rules/local.rules at line 204
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 211
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [139,445] (" from file /etc/suricata/rules/local.rules at line 215
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-19 07:04:44 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 222
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: detect: 1 rule files processed. 1 rules successfully loaded, 36 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: detect: 1 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 1 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-19 07:04:44 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-19 07:04:44 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-19 07:04:44 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[35 - Suricata-Main] 2026-07-19 07:25:52 Info: cpu: CPUs/cores online: 4
+[35 - Suricata-Main] 2026-07-19 07:25:52 Info: suricata: Running suricata under test mode
+[35 - Suricata-Main] 2026-07-19 07:25:52 Info: suricata: Setting engine mode to IDS mode by default
+[35 - Suricata-Main] 2026-07-19 07:25:52 Info: exception-policy: master exception-policy set to: auto
+[35 - Suricata-Main] 2026-07-19 07:25:52 Info: logopenfile: fast output device (regular) initialized: fast.log
+[35 - Suricata-Main] 2026-07-19 07:25:52 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[35 - Suricata-Main] 2026-07-19 07:25:52 Info: logopenfile: stats output device (regular) initialized: stats.log
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 11
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 19
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 24
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 32
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 37
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 45
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 50
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 58
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 63
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 70
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 74
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 81
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 85
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 92
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 97
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 104
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 109
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 116
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 22 (" from file /etc/suricata/rules/local.rules at line 121
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 129
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [80,3000] (" from file /etc/suricata/rules/local.rules at line 134
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 142
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [21,22,23,25,53,80,110,139,143,443,445,3306,3389,5432,8080] (" from file /etc/suricata/rules/local.rules at line 146
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 154
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert udp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 159
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 165
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert dns any any -> $HOME_NET 53 (" from file /etc/suricata/rules/local.rules at line 169
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 176
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 23 (" from file /etc/suricata/rules/local.rules at line 181
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 188
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 21 (" from file /etc/suricata/rules/local.rules at line 192
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 200
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 3306 (" from file /etc/suricata/rules/local.rules at line 204
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 211
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: Signature missing required value "sid".
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [139,445] (" from file /etc/suricata/rules/local.rules at line 215
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect-parse: no rule options.
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 222
+[35 - Suricata-Main] 2026-07-19 07:25:52 Info: detect: 1 rule files processed. 1 rules successfully loaded, 36 rules failed, 0 rules skipped
+[35 - Suricata-Main] 2026-07-19 07:25:52 Error: suricata: Loading signatures failed.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[41 - Suricata-Main] 2026-07-19 07:31:12 Info: cpu: CPUs/cores online: 4
+[41 - Suricata-Main] 2026-07-19 07:31:12 Info: suricata: Running suricata under test mode
+[41 - Suricata-Main] 2026-07-19 07:31:12 Info: suricata: Setting engine mode to IDS mode by default
+[41 - Suricata-Main] 2026-07-19 07:31:12 Info: exception-policy: master exception-policy set to: auto
+[41 - Suricata-Main] 2026-07-19 07:31:12 Info: logopenfile: fast output device (regular) initialized: fast.log
+[41 - Suricata-Main] 2026-07-19 07:31:12 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[41 - Suricata-Main] 2026-07-19 07:31:12 Info: logopenfile: stats output device (regular) initialized: stats.log
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 11
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 19
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 24
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 32
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 37
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 45
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 50
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 58
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 63
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 70
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 74
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 81
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 85
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 92
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 97
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 104
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 109
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 116
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 22 (" from file /etc/suricata/rules/local.rules at line 121
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 129
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [80,3000] (" from file /etc/suricata/rules/local.rules at line 134
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 142
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [21,22,23,25,53,80,110,139,143,443,445,3306,3389,5432,8080] (" from file /etc/suricata/rules/local.rules at line 146
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 154
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert udp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 159
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 165
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert dns any any -> $HOME_NET 53 (" from file /etc/suricata/rules/local.rules at line 169
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 176
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 23 (" from file /etc/suricata/rules/local.rules at line 181
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 188
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 21 (" from file /etc/suricata/rules/local.rules at line 192
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 200
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 3306 (" from file /etc/suricata/rules/local.rules at line 204
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 211
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: Signature missing required value "sid".
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [139,445] (" from file /etc/suricata/rules/local.rules at line 215
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect-parse: no rule options.
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 222
+[41 - Suricata-Main] 2026-07-19 07:31:12 Info: detect: 1 rule files processed. 1 rules successfully loaded, 36 rules failed, 0 rules skipped
+[41 - Suricata-Main] 2026-07-19 07:31:12 Error: suricata: Loading signatures failed.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[47 - Suricata-Main] 2026-07-19 07:32:50 Info: cpu: CPUs/cores online: 4
+[47 - Suricata-Main] 2026-07-19 07:32:50 Info: suricata: Running suricata under test mode
+[47 - Suricata-Main] 2026-07-19 07:32:50 Info: suricata: Setting engine mode to IDS mode by default
+[47 - Suricata-Main] 2026-07-19 07:32:50 Info: exception-policy: master exception-policy set to: auto
+[47 - Suricata-Main] 2026-07-19 07:32:50 Info: logopenfile: fast output device (regular) initialized: fast.log
+[47 - Suricata-Main] 2026-07-19 07:32:50 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[47 - Suricata-Main] 2026-07-19 07:32:50 Info: logopenfile: stats output device (regular) initialized: stats.log
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 11
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 19
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 24
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 32
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 37
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 45
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 50
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 58
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 63
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 70
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 74
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 81
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 85
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 92
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 97
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 104
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 109
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 116
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 22 (" from file /etc/suricata/rules/local.rules at line 121
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 129
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [80,3000] (" from file /etc/suricata/rules/local.rules at line 134
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 142
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [21,22,23,25,53,80,110,139,143,443,445,3306,3389,5432,8080] (" from file /etc/suricata/rules/local.rules at line 146
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 154
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert udp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 159
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 165
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert dns any any -> $HOME_NET 53 (" from file /etc/suricata/rules/local.rules at line 169
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 176
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 23 (" from file /etc/suricata/rules/local.rules at line 181
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 188
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 21 (" from file /etc/suricata/rules/local.rules at line 192
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 200
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 3306 (" from file /etc/suricata/rules/local.rules at line 204
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 211
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: Signature missing required value "sid".
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [139,445] (" from file /etc/suricata/rules/local.rules at line 215
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect-parse: no rule options.
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 222
+[47 - Suricata-Main] 2026-07-19 07:32:50 Info: detect: 1 rule files processed. 1 rules successfully loaded, 36 rules failed, 0 rules skipped
+[47 - Suricata-Main] 2026-07-19 07:32:50 Error: suricata: Loading signatures failed.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[53 - Suricata-Main] 2026-07-19 07:33:16 Info: cpu: CPUs/cores online: 4
+[53 - Suricata-Main] 2026-07-19 07:33:16 Info: suricata: Running suricata under test mode
+[53 - Suricata-Main] 2026-07-19 07:33:16 Info: suricata: Setting engine mode to IDS mode by default
+[53 - Suricata-Main] 2026-07-19 07:33:16 Info: exception-policy: master exception-policy set to: auto
+[53 - Suricata-Main] 2026-07-19 07:33:16 Info: logopenfile: fast output device (regular) initialized: fast.log
+[53 - Suricata-Main] 2026-07-19 07:33:16 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[53 - Suricata-Main] 2026-07-19 07:33:16 Info: logopenfile: stats output device (regular) initialized: stats.log
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 11
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 19
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 24
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 32
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 37
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 45
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 50
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 58
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 63
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 70
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 74
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 81
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 85
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 92
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 97
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 104
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 109
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 116
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 22 (" from file /etc/suricata/rules/local.rules at line 121
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 129
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [80,3000] (" from file /etc/suricata/rules/local.rules at line 134
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 142
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [21,22,23,25,53,80,110,139,143,443,445,3306,3389,5432,8080] (" from file /etc/suricata/rules/local.rules at line 146
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 154
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert udp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 159
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 165
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert dns any any -> $HOME_NET 53 (" from file /etc/suricata/rules/local.rules at line 169
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 176
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 23 (" from file /etc/suricata/rules/local.rules at line 181
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 188
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 21 (" from file /etc/suricata/rules/local.rules at line 192
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 200
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 3306 (" from file /etc/suricata/rules/local.rules at line 204
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 211
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: Signature missing required value "sid".
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET [139,445] (" from file /etc/suricata/rules/local.rules at line 215
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect-parse: no rule options.
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 222
+[53 - Suricata-Main] 2026-07-19 07:33:16 Info: detect: 1 rule files processed. 1 rules successfully loaded, 36 rules failed, 0 rules skipped
+[53 - Suricata-Main] 2026-07-19 07:33:16 Error: suricata: Loading signatures failed.
+[1 - Suricata-Main] 2026-07-19 07:35:36 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-19 07:35:37 Info: suricata: time elapsed 1852.663s
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: counters: Alerts: 0
+[1 - Suricata-Main] 2026-07-19 07:35:38 Notice: device: enp2s0: packets: 55010, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-19 07:35:38 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: detect: 1 rule files processed. 6 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: detect: 6 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 1 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-19 07:35:38 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-19 07:35:38 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-19 07:35:38 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[29 - Suricata-Main] 2026-07-19 07:35:49 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[29 - Suricata-Main] 2026-07-19 07:35:49 Info: cpu: CPUs/cores online: 4
+[29 - Suricata-Main] 2026-07-19 07:35:49 Info: suricata: Running suricata under test mode
+[29 - Suricata-Main] 2026-07-19 07:35:49 Info: suricata: Setting engine mode to IDS mode by default
+[29 - Suricata-Main] 2026-07-19 07:35:49 Info: exception-policy: master exception-policy set to: auto
+[29 - Suricata-Main] 2026-07-19 07:35:49 Info: logopenfile: fast output device (regular) initialized: fast.log
+[29 - Suricata-Main] 2026-07-19 07:35:49 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[29 - Suricata-Main] 2026-07-19 07:35:49 Info: logopenfile: stats output device (regular) initialized: stats.log
+[29 - Suricata-Main] 2026-07-19 07:35:49 Info: detect: 1 rule files processed. 6 rules successfully loaded, 0 rules failed, 0 rules skipped
+[29 - Suricata-Main] 2026-07-19 07:35:49 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[29 - Suricata-Main] 2026-07-19 07:35:49 Info: detect: 6 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 1 inspect application layer, 0 are decoder event only
+[29 - Suricata-Main] 2026-07-19 07:35:49 Notice: suricata: Configuration provided was successfully loaded. Exiting.
+[1 - Suricata-Main] 2026-07-21 09:05:27 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-21 09:05:28 Info: suricata: time elapsed 178190.484s
+[1 - Suricata-Main] 2026-07-21 09:05:29 Info: counters: Alerts: 1009
+[1 - Suricata-Main] 2026-07-21 09:05:29 Notice: device: enp2s0: packets: 2476, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-21 09:05:41 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: detect: 1 rule files processed. 6 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: detect: 6 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 1 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-21 09:05:41 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-21 09:05:41 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-21 09:05:41 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-24 02:58:55 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-24 02:58:56 Info: suricata: time elapsed 237194.859s
+[1 - Suricata-Main] 2026-07-24 02:58:57 Info: counters: Alerts: 250
+[1 - Suricata-Main] 2026-07-24 02:58:57 Notice: device: enp2s0: packets: 777333, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-24 02:59:39 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: detect: 1 rule files processed. 6 rules successfully loaded, 0 rules failed, 0 rules skipped
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: detect: 6 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 1 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-24 02:59:39 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-24 02:59:39 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-24 02:59:39 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-24 03:21:07 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-24 03:21:07 Info: suricata: time elapsed 1288.226s
+[1 - Suricata-Main] 2026-07-24 03:21:09 Info: counters: Alerts: 80
+[1 - Suricata-Main] 2026-07-24 03:21:09 Notice: device: enp2s0: packets: 320814, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-24 03:21:35 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 4
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 10
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 15
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 21
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 26
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 32
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 37
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 43
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert udp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 48
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 53
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 58
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 63
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 22 (" from file /etc/suricata/rules/local.rules at line 68
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 74
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 21 (" from file /etc/suricata/rules/local.rules at line 79
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 85
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 90
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 97
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 102
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 109
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 114
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 121
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 126
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 133
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 138
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 03:21:35 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 145
+[1 - Suricata-Main] 2026-07-24 03:21:35 Warning: detect: 1 rule files specified, but no rules were loaded!
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: detect: 0 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-24 03:21:35 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-24 03:21:35 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-24 03:21:35 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-24 05:48:50 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-24 05:48:50 Info: suricata: time elapsed 8835.141s
+[1 - Suricata-Main] 2026-07-24 05:48:51 Info: counters: Alerts: 0
+[1 - Suricata-Main] 2026-07-24 05:48:51 Notice: device: enp2s0: packets: 60748, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-24 05:49:03 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 4
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 10
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 15
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 21
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 26
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 32
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 37
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 43
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert udp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 48
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 53
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 58
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 63
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 22 (" from file /etc/suricata/rules/local.rules at line 68
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 74
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 21 (" from file /etc/suricata/rules/local.rules at line 79
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 85
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 90
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 97
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 102
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 109
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 114
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 121
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 126
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 133
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 138
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 05:49:03 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 145
+[1 - Suricata-Main] 2026-07-24 05:49:03 Warning: detect: 1 rule files specified, but no rules were loaded!
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: detect: 0 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-24 05:49:03 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-24 05:49:03 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-24 05:49:03 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-24 07:08:16 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-24 07:08:16 Info: suricata: time elapsed 4753.366s
+[1 - Suricata-Main] 2026-07-24 07:08:17 Info: counters: Alerts: 0
+[1 - Suricata-Main] 2026-07-24 07:08:17 Notice: device: enp2s0: packets: 54387, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-24 07:08:29 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 4
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 10
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 15
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 21
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 26
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 32
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 37
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 43
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert udp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 48
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 53
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 58
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 63
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 22 (" from file /etc/suricata/rules/local.rules at line 68
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 74
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 21 (" from file /etc/suricata/rules/local.rules at line 79
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 85
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 90
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 97
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 102
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 109
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 114
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 121
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 126
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 133
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 138
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:08:29 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 145
+[1 - Suricata-Main] 2026-07-24 07:08:29 Warning: detect: 1 rule files specified, but no rules were loaded!
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: detect: 0 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-24 07:08:29 Info: runmodes: enp2s0: creating 4 threads
+[20 - W#01-enp2s0] 2026-07-24 07:08:29 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-24 07:08:29 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.
+[1 - Suricata-Main] 2026-07-24 07:21:09 Notice: suricata: Signal Received.  Stopping engine.
+[1 - Suricata-Main] 2026-07-24 07:21:10 Info: suricata: time elapsed 760.844s
+[1 - Suricata-Main] 2026-07-24 07:21:11 Info: counters: Alerts: 0
+[1 - Suricata-Main] 2026-07-24 07:21:11 Notice: device: enp2s0: packets: 29424, drops: 0 (0.00%), invalid chksum: 0
+[1 - Suricata-Main] 2026-07-24 07:21:22 Notice: suricata: This is Suricata version 8.0.6 RELEASE running in SYSTEM mode
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: cpu: CPUs/cores online: 4
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: suricata: Setting engine mode to IDS mode by default
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: exception-policy: master exception-policy set to: auto
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: privs: dropped the caps for main thread
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: conf: Running in live mode, activating unix socket
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: logopenfile: fast output device (regular) initialized: fast.log
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: logopenfile: eve-log output device (regular) initialized: eve.json
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: logopenfile: stats output device (regular) initialized: stats.log
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 4
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 10
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 15
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 21
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 26
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 32
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 37
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 43
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert udp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 48
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 53
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert icmp any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 58
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 63
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 22 (" from file /etc/suricata/rules/local.rules at line 68
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 74
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert tcp any any -> $HOME_NET 21 (" from file /etc/suricata/rules/local.rules at line 79
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 85
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 90
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 97
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 102
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 109
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 114
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 121
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 126
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 133
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: Signature missing required value "sid".
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature "alert http any any -> $HOME_NET any (" from file /etc/suricata/rules/local.rules at line 138
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect-parse: no rule options.
+[1 - Suricata-Main] 2026-07-24 07:21:22 Error: detect: error parsing signature ")" from file /etc/suricata/rules/local.rules at line 145
+[1 - Suricata-Main] 2026-07-24 07:21:22 Warning: detect: 1 rule files specified, but no rules were loaded!
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: threshold-config: Threshold config parsed: 0 rule(s) found
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: detect: 0 signatures processed. 0 are IP-only rules, 0 are inspecting packet payload, 0 inspect application layer, 0 are decoder event only
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: unix-manager: unix socket '/var/run/suricata/suricata-command.socket'
+[1 - Suricata-Main] 2026-07-24 07:21:22 Info: runmodes: enp2s0: creating 4 threads
+[21 - W#01-enp2s0] 2026-07-24 07:21:22 Info: ioctl: enp2s0: MTU 1500
+[1 - Suricata-Main] 2026-07-24 07:21:22 Notice: threads: Threads created -> W: 4 FM: 1 FR: 1   Engine started.

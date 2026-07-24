@@ -9,8 +9,8 @@ services:
       - SYS_NICE
     volumes:
       - ./suricata/logs:/var/log/suricata
-      - ./suricata/rules/local.rules:/etc/suricata/rules/local.rules:ro
-    command: -i ${SENSOR_IFACE:-ens34} -S /etc/suricata/rules/local.rules
+      - ./suricata/rules/local.rules:/etc/suricata/rules/local.rules
+    command: -i enp2s0 -S /etc/suricata/rules/local.rules
     restart: unless-stopped
 
   wazuh-agent:
@@ -20,7 +20,7 @@ services:
     network_mode: host
     restart: unless-stopped
     environment:
-      - WAZUH_MANAGER_SERVER=${WAZUH_MANAGER_IP:-10.30.30.20}
+      - WAZUH_MANAGER_SERVER=${WAZUH_MANAGER_IP:-10.30.30.10}
       - WAZUH_AGENT_NAME=ubuntu1-security-gateway
     volumes:
       - ./wazuh-agent/ossec.conf:/wazuh-config-mount/etc/ossec.conf:ro
