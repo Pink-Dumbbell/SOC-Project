@@ -1,6 +1,0 @@
-full_log,label
-GET /DVWA/vulnerabilities/sqli/?id=1' OR '1'='1,sql_injection
-<script>alert(1)</script>,xss
-GET /DVWA/../../../../etc/passwd,directory_traversal
-; cat /etc/passwd,command_injection
-POST /login username=admin password=admin123,brute_force
