@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=SOAR Admin
+Comment=SOAR Approval Console
+
+Exec=gnome-terminal -- bash -c "docker exec -it soar-ai-auto python admin_console.py; exec bash"
+
+Icon=/home/soc/SOC-Project/soc-server/desktop/icons/block.png
+
+Terminal=false
+Categories=Utility;

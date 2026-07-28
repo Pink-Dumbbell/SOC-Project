@@ -1,0 +1,15 @@
+services:
+  spiderfoot:
+    build:
+      context: .
+
+    image: spiderfoot
+    container_name: spiderfoot
+
+    ports:
+      - "5001:5001"
+
+    volumes:
+      - /home/soc/.spiderfoot:/var/lib/spiderfoot
+
+    restart: unless-stopped

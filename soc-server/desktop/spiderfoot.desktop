@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=SpiderFoot
+Comment=Open SpiderFoot
+Exec=xdg-open http://10.30.30.10:5001
+Icon=/home/soc/SOC-Project/soc-server/desktop/icons/spider.png
+Terminal=false
+Categories=Security;

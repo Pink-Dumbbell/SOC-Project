@@ -1,0 +1,14 @@
+[Unit]
+Description=SpiderFoot OSINT Server
+After=network.target
+
+[Service]
+Type=simple
+User=soc
+WorkingDirectory=/home/soc/SOC-Project/soc-server/spiderfoot
+ExecStart=/home/soc/SOC-Project/soc-server/spiderfoot/venv/bin/python3 /home/soc/SOC-Project/soc-server/spiderfoot/sf.py -l 0.0.0.0:5001
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
