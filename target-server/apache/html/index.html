@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mini SOC Range의 DMZ 취약 서버. DVWA 공격 트래픽을 Suricata/Wazuh/SOAR AI 파이프라인으로 탐지·채점·대응합니다.">
+<title>TARGET-01 :: Rocky Linux DMZ // Mini SOC Range</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 46 46'%3E%3Crect width='46' height='46' fill='%230a0b08'/%3E%3Ccircle cx='23' cy='23' r='15' fill='none' stroke='%23ffb300' stroke-width='2.5'/%3E%3Ccircle cx='23' cy='23' r='3' fill='%23ffb300'/%3E%3Cline x1='23' y1='0' x2='23' y2='10' stroke='%23ffb300' stroke-width='2.5'/%3E%3Cline x1='23' y1='36' x2='23' y2='46' stroke='%23ffb300' stroke-width='2.5'/%3E%3Cline x1='0' y1='23' x2='10' y2='23' stroke='%23ffb300' stroke-width='2.5'/%3E%3Cline x1='36' y1='23' x2='46' y2='23' stroke='%23ffb300' stroke-width='2.5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --void:#0a0b08;--panel:#14150f;--panel-2:#191a13;--line:#2b2c22;
+    --amber:#ffb300;--amber-dim:#8a6300;--alert:#ff4438;--green:#4ce0a0;
+    --paper:#d8d4c4;--paper-dim:#8b8878;
+    --mono:'JetBrains Mono', 'Noto Sans KR', ui-monospace, monospace;
+    --sans:'IBM Plex Sans', 'Noto Sans KR', system-ui, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--void);color:var(--paper);font-family:var(--sans);
+    background-image:
+      radial-gradient(ellipse 900px 500px at 15% -10%, rgba(255,179,0,0.07), transparent 60%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px);
+  }
+  a{color:inherit;}
+  ::selection{background:var(--amber);color:var(--void);}
+  :focus-visible{outline:2px solid var(--amber);outline-offset:3px;}
+  .shell{max-width:1100px;margin:0 auto;padding:56px 28px 90px;}
+
+  .topline{
+    display:flex;justify-content:space-between;align-items:center;
+    font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;
+    color:var(--paper-dim);text-transform:uppercase;
+    padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line);
+  }
+  .topline .dot{color:var(--amber);}
+  .live{display:inline-flex;align-items:center;gap:8px;color:var(--amber);}
+  .live .pulse{
+    width:7px;height:7px;border-radius:50%;background:var(--amber);
+    box-shadow:0 0 0 0 rgba(255,179,0,.6);animation:pulse 2.2s ease-out infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(255,179,0,.55);}
+    70%{box-shadow:0 0 0 9px rgba(255,179,0,0);}
+    100%{box-shadow:0 0 0 0 rgba(255,179,0,0);}
+  }
+
+  .hero{
+    position:relative;overflow:hidden;
+    background:linear-gradient(180deg, var(--panel), var(--void));
+    border:1px solid var(--line);border-radius:4px;padding:44px 40px 38px;
+  }
+  .hero::after{
+    content:"";position:absolute;left:0;right:0;height:120px;
+    background:linear-gradient(180deg, rgba(255,179,0,0.12), transparent);
+    animation:scan 7s linear infinite;pointer-events:none;
+  }
+  @keyframes scan{0%{top:-120px;}100%{top:110%;}}
+  .hero-inner{position:relative;z-index:1;}
+  .reticle{width:46px;height:46px;flex:none;}
+  .reticle circle{fill:none;stroke:var(--amber);stroke-width:1.4;}
+  .reticle line{stroke:var(--amber);stroke-width:1.4;}
+  .eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:22px;}
+  .eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;color:var(--amber);text-transform:uppercase;}
+  .eyebrow b{color:var(--alert);}
+  h1{
+    font-family:var(--mono);font-weight:800;font-size:clamp(2.2rem, 5.2vw, 3.8rem);
+    line-height:1.04;margin:0 0 18px;letter-spacing:-.01em;color:var(--paper);
+  }
+  h1 span{color:var(--amber);}
+  .lede{max-width:640px;color:var(--paper-dim);font-size:16px;line-height:1.75;margin:0 0 30px;}
+  .designation{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);}
+  .designation div{padding:16px 20px 0;border-right:1px solid var(--line);}
+  .designation div:last-child{border-right:none;}
+  .designation small{
+    display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+    color:var(--paper-dim);text-transform:uppercase;margin-bottom:6px;
+  }
+  .designation strong{font-family:var(--mono);font-size:15px;color:var(--paper);}
+
+  .section{margin-top:56px;}
+  .section-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;}
+  .section-head .idx{font-family:var(--mono);color:var(--amber-dim);font-size:13px;}
+  .section-head h2{
+    font-family:var(--mono);font-size:13px;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--amber);margin:0;padding-bottom:0;
+  }
+  .section-head .rule{flex:1;height:1px;background:var(--line);}
+  .section-note{font-size:13.5px;color:var(--paper-dim);line-height:1.7;max-width:720px;margin:-6px 0 20px;}
+  .section-note b{font-weight:600;}
+
+  .statgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .stat{background:var(--panel);padding:18px 18px 16px;}
+  .stat small{display:block;font-family:var(--mono);font-size:11px;color:var(--paper-dim);letter-spacing:.06em;margin-bottom:10px;}
+  .stat .v{font-family:var(--mono);font-weight:700;font-size:16px;}
+  .v.up{color:var(--amber);}
+  .v.up::before{content:"● ";font-size:10px;}
+  .v.armed{color:var(--paper);}
+  .v.armed::before{content:"◌ ";font-size:10px;color:var(--paper-dim);}
+
+  .pipeline{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);}
+  .stage{
+    flex:1 1 190px;padding:18px 18px;border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);background:var(--panel);position:relative;
+  }
+  .stage:nth-child(4n){border-right:none;}
+  .stage .n{font-family:var(--mono);font-size:11px;color:var(--amber-dim);display:block;margin-bottom:8px;}
+  .stage h4{margin:0 0 6px;font-family:var(--mono);font-size:13.5px;color:var(--paper);font-weight:600;}
+  .stage p{margin:0;font-size:13px;color:var(--paper-dim);line-height:1.55;}
+  .stage.risk h4{color:var(--amber);}
+  .stage.action h4{color:var(--alert);}
+
+  .app{background:var(--panel);border:1px solid var(--line);padding:26px 26px 24px;}
+  .app .tag{
+    display:inline-block;font-family:var(--mono);font-size:10.5px;
+    letter-spacing:.08em;padding:3px 8px;background:var(--alert);color:#1a0403;
+    font-weight:700;margin-bottom:14px;
+  }
+  .app h3{margin:0 0 10px;font-family:var(--mono);font-size:19px;color:var(--paper);}
+  .app p{margin:0;color:var(--paper-dim);font-size:14px;line-height:1.7;}
+
+  .ruletable{border:1px solid var(--line);background:var(--panel);font-family:var(--mono);font-size:12.5px;}
+  .ruletable .row{
+    display:grid;grid-template-columns:60px 1fr 150px;gap:14px;
+    padding:10px 20px;border-bottom:1px solid var(--line);align-items:center;
+  }
+  .ruletable .row:last-child{border-bottom:none;}
+  .ruletable .row.head{color:var(--paper-dim);text-transform:uppercase;font-size:10.5px;letter-spacing:.08em;}
+  .ruletable .sid{color:var(--amber-dim);}
+  .ruletable .msg{color:var(--paper);}
+  .ruletable .meta{color:var(--paper-dim);text-align:right;}
+
+  .formula{
+    border:1px solid var(--line);background:var(--panel);padding:22px 26px;
+    font-family:var(--mono);font-size:14px;color:var(--amber);letter-spacing:.01em;overflow-x:auto;white-space:nowrap;
+  }
+  .formula .plus{color:var(--paper-dim);padding:0 4px;}
+  .factorgrid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--line);border:1px solid var(--line);border-top:none;margin-bottom:24px;
+  }
+  .factor{background:var(--panel);padding:18px 20px;}
+  .factor small{
+    display:block;font-family:var(--mono);font-size:10.5px;color:var(--amber-dim);
+    letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;
+  }
+  .factor p{margin:0;font-size:13px;color:var(--paper-dim);line-height:1.6;}
+
+  .scoretable{border:1px solid var(--line);background:var(--panel);font-family:var(--mono);font-size:12.5px;}
+  .scoretable .row{
+    display:grid;grid-template-columns:1fr 70px;gap:14px;
+    padding:9px 20px;border-bottom:1px solid var(--line);align-items:center;
+  }
+  .scoretable .row:last-child{border-bottom:none;}
+  .scoretable .row.head{color:var(--paper-dim);text-transform:uppercase;font-size:10.5px;letter-spacing:.08em;}
+  .scoretable .attack{color:var(--paper);}
+  .scoretable .score{text-align:right;color:var(--amber);font-weight:700;}
+
+  .matrix{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .mcard{background:var(--panel);padding:22px 20px;position:relative;}
+  .mcard .range{font-family:var(--mono);font-size:11px;color:var(--paper-dim);letter-spacing:.06em;margin-bottom:10px;}
+  .mcard .level{font-family:var(--mono);font-weight:800;font-size:18px;margin-bottom:14px;letter-spacing:.02em;}
+  .mcard.low .level{color:var(--green);}
+  .mcard.medium .level{color:var(--amber);}
+  .mcard.high .level{color:#ff8a3d;}
+  .mcard.critical .level{color:var(--alert);}
+  .mcard .action{font-size:13px;color:var(--paper);line-height:1.6;margin-bottom:6px;}
+  .mcard .sub{font-size:11.5px;color:var(--paper-dim);line-height:1.6;}
+  .mcard::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;}
+  .mcard.low::before{background:var(--green);}
+  .mcard.medium::before{background:var(--amber);}
+  .mcard.high::before{background:#ff8a3d;}
+  .mcard.critical::before{background:var(--alert);}
+
+  .scenarios{border:1px solid var(--line);background:var(--panel);}
+  .scenario{
+    display:grid;grid-template-columns:34px 1fr 100px 130px;gap:16px;align-items:center;
+    padding:14px 20px;border-bottom:1px solid var(--line);
+    text-decoration:none;color:var(--paper);transition:background .12s ease;
+  }
+  .scenario:last-child{border-bottom:none;}
+  .scenario:hover{background:var(--panel-2);}
+  .scenario.setup{background:rgba(255,179,0,0.06);}
+  .scenario .step{font-family:var(--mono);color:var(--amber-dim);font-size:13px;}
+  .scenario .name{font-family:var(--mono);font-size:13.5px;color:var(--paper);}
+  .scenario .name small{display:block;font-family:var(--sans);color:var(--paper-dim);font-size:11.5px;margin-top:3px;}
+  .scenario .lvl{
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
+    padding:4px 9px;text-align:center;border:1px solid var(--line);justify-self:start;
+  }
+  .lvl.setup{color:var(--amber);border-color:var(--amber);}
+  .lvl.low{color:var(--green);border-color:var(--green);}
+  .lvl.medium{color:var(--amber);border-color:var(--amber);}
+  .lvl.high{color:#ff8a3d;border-color:#ff8a3d;}
+  .lvl.critical{color:var(--alert);border-color:var(--alert);}
+  .scenario .go{font-family:var(--mono);font-size:11.5px;color:var(--paper-dim);text-align:right;}
+  .scenario:hover .go{color:var(--amber);}
+
+  .manifest{border:1px solid var(--line);background:var(--panel);font-family:var(--mono);font-size:13px;overflow:hidden;}
+  .manifest .row{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:11px 20px;border-bottom:1px solid var(--line);}
+  .manifest .row:last-child{border-bottom:none;}
+  .manifest .row:hover{background:var(--panel-2);}
+  .manifest .k{color:var(--paper-dim);}
+  .manifest .v{color:var(--amber);word-break:break-all;}
+
+  .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:56px;}
+  .btn{
+    font-family:var(--mono);font-size:14px;font-weight:600;letter-spacing:.02em;
+    padding:15px 26px;border:1px solid var(--line);text-decoration:none;
+    display:inline-flex;align-items:center;gap:10px;
+    transition:transform .15s ease, border-color .15s ease, background .15s ease;
+    background:var(--panel);color:var(--paper);
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn.primary{background:var(--amber);color:var(--void);border-color:var(--amber);}
+  .btn.primary:hover{background:#ffc233;}
+  .btn .arrow{opacity:.6;}
+
+  footer{
+    margin-top:64px;padding-top:22px;border-top:1px solid var(--line);
+    font-family:var(--mono);font-size:12px;color:var(--paper-dim);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  }
+
+  @media (max-width:760px){
+    .designation{grid-template-columns:1fr;}
+    .designation div{border-right:none;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:2px;}
+    .statgrid{grid-template-columns:1fr 1fr;}
+    .stage{flex:1 1 100%;border-right:none;}
+    .manifest .row{grid-template-columns:1fr;gap:4px;}
+    .ruletable .row{grid-template-columns:1fr;gap:4px;text-align:left;}
+    .ruletable .meta{text-align:left;}
+    .factorgrid{grid-template-columns:1fr;}
+    .matrix{grid-template-columns:1fr 1fr;}
+    .scenario{grid-template-columns:24px 1fr;}
+    .scenario .lvl,.scenario .go{display:none;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .hero::after{animation:none;display:none;}
+    .live .pulse{animation:none;}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <div class="topline">
+    <span>MINI SOC RANGE <span class="dot">//</span> ASSET LOG</span>
+    <span class="live"><span class="pulse"></span>LIVE — SESSION ACTIVE</span>
+  </div>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow-row">
+        <svg class="reticle" viewBox="0 0 46 46" aria-hidden="true">
+          <circle cx="23" cy="23" r="15"/>
+          <circle cx="23" cy="23" r="2.4" fill="var(--amber)"/>
+          <line x1="23" y1="0" x2="23" y2="10"/>
+          <line x1="23" y1="36" x2="23" y2="46"/>
+          <line x1="0" y1="23" x2="10" y2="23"/>
+          <line x1="36" y1="23" x2="46" y2="23"/>
+        </svg>
+        <span class="eyebrow">TARGET-01 <b>::</b> DELIBERATELY VULNERABLE</span>
+      </div>
+      <h1>ROCKY LINUX<br><span>DMZ TARGET SERVER</span></h1>
+      <p class="lede">
+        의도적으로 취약하게 구성된 사격장 표적입니다. DVWA가 공격 트래픽을
+        만들어내고, SSH·FTP·auditd 로그가 게이트웨이 너머
+        Suricata → Wazuh → SOAR AI Risk Engine 파이프라인으로 흘러 들어갑니다.
+      </p>
+      <div class="designation">
+        <div><small>Zone</small><strong>DMZ / Segment 1</strong></div>
+        <div><small>Address</small><strong>10.20.20.10</strong></div>
+        <div><small>Wazuh Agent</small><strong>rocky-target · 013</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><span class="idx">01</span><h2>Service Status</h2><span class="rule"></span></div>
+    <div class="statgrid">
+      <div class="stat"><small>APACHE / PHP</small><div class="v up">RUNNING</div></div>
+      <div class="stat"><small>DVWA</small><div class="v up">RUNNING</div></div>
+      <div class="stat"><small>MARIADB</small><div class="v up">RUNNING</div></div>
+      <div class="stat"><small>DOCKER ENGINE</small><div class="v up">ACTIVE</div></div>
+      <div class="stat"><small>SSH</small><div class="v up">ENABLED</div></div>
+      <div class="stat"><small>FTP / VSFTPD</small><div class="v up">ENABLED</div></div>
+      <div class="stat"><small>AUDITD / AGENT</small><div class="v armed">ARMED</div></div>
+      <div class="stat"><small>SURICATA</small><div class="v armed">ARMED</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><span class="idx">02</span><h2>Vulnerable Surface</h2><span class="rule"></span></div>
+    <div class="app">
+      <span class="tag">CLASSIC WEB — SECURITY LEVEL: LOW</span>
+      <h3>DVWA</h3>
+      <p>SQL Injection, XSS, Command Injection, File Upload, Directory
+        Traversal, Brute Force — 아래 시나리오 전부 이 서비스를 대상으로 실행됩니다.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><span class="idx">03</span><h2>Detection &amp; Response Pipeline</h2><span class="rule"></span></div>
+    <div class="pipeline">
+      <div class="stage"><span class="n">01</span><h4>Kali Attack</h4><p>공격 트래픽 발생</p></div>
+      <div class="stage"><span class="n">02</span><h4>Ubuntu1 Gateway</h4><p>iptables DNAT 라우팅</p></div>
+      <div class="stage"><span class="n">03</span><h4>Suricata IDS</h4><p>시그니처 기반 1차 탐지</p></div>
+      <div class="stage"><span class="n">04</span><h4>Rocky Target</h4><p>취약 서비스가 로그 생성</p></div>
+      <div class="stage"><span class="n">05</span><h4>Wazuh Agent</h4><p>로그 수집 및 전송</p></div>
+      <div class="stage"><span class="n">06</span><h4>Wazuh Manager</h4><p>규칙 매칭, 알림 생성</p></div>
+      <div class="stage risk"><span class="n">07</span><h4>SOAR AI Risk Engine</h4><p>Risk Score 산정 (LOW ~ CRITICAL)</p></div>
+      <div class="stage action"><span class="n">08</span><h4>Auto Response</h4><p>로그 저장 / 알림 / 임시차단 / 영구차단 승인</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><span class="idx">04</span><h2>Suricata Rule Set</h2><span class="rule"></span></div>
+    <p class="section-note">
+      게이트웨이(Ubuntu1)에서 3개 인터페이스를 동시에 감시하며 13개 커스텀 시그니처로
+      정찰·무차별대입·스캐너 트래픽을 1차 탐지합니다.
+    </p>
+    <div class="ruletable">
+      <div class="row head"><span>SID</span><span>Signature</span><span>Threshold</span></div>
+      <div class="row"><span class="sid">1000001</span><span class="msg">Port Scan — SYN</span><span class="meta">20 / 5s</span></div>
+      <div class="row"><span class="sid">1000002</span><span class="msg">Port Scan — FIN</span><span class="meta">10 / 5s</span></div>
+      <div class="row"><span class="sid">1000003</span><span class="msg">Port Scan — NULL</span><span class="meta">10 / 5s</span></div>
+      <div class="row"><span class="sid">1000004</span><span class="msg">Port Scan — XMAS</span><span class="meta">10 / 5s</span></div>
+      <div class="row"><span class="sid">1000005</span><span class="msg">UDP Scan</span><span class="meta">20 / 5s</span></div>
+      <div class="row"><span class="sid">1000006</span><span class="msg">ICMP Flood</span><span class="meta">30 / 5s</span></div>
+      <div class="row"><span class="sid">1000007</span><span class="msg">SSH Brute Force</span><span class="meta">5 / 60s</span></div>
+      <div class="row"><span class="sid">1000008</span><span class="msg">FTP Brute Force</span><span class="meta">5 / 60s</span></div>
+      <div class="row"><span class="sid">1000009–13</span><span class="msg">Scanner UA — sqlmap / Nikto / Gobuster / Dirsearch / ffuf</span><span class="meta">User-Agent</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><span class="idx">05</span><h2>Risk Scoring Engine</h2><span class="rule"></span></div>
+    <p class="section-note">
+      OWASP Risk Rating Methodology의 Likelihood × Impact 개념을 참고해
+      실시간 자동 대응에 맞게 가산점 방식으로 단순화한 자체 채점 체계입니다. 최대 100점.
+    </p>
+    <div class="formula">
+      SCORE <span class="plus">=</span> BASE <span class="plus">+</span> LIKELIHOOD <span class="plus">+</span> MULTI-STAGE <span class="plus">+</span> BUSINESS IMPACT <span class="plus">+</span> SENSITIVE TARGET <span class="plus">+</span> POST-EXPLOITATION
+    </div>
+    <br>
+    <div class="factorgrid">
+      <div class="factor"><small>Likelihood</small><p>동일 IP 반복 횟수 — 5회↑ +5, 20회↑ +10, 50회↑ +15</p></div>
+      <div class="factor"><small>Multi-Stage</small><p>Kill Chain 연쇄 패턴 (정찰→침투→실행) 감지 시 +10~20</p></div>
+      <div class="factor"><small>Business Impact</small><p>/admin, /api/admin +15 · /login +10 (요청 URL 파싱 기반)</p></div>
+      <div class="factor"><small>Sensitive Target</small><p>Traversal/Inclusion이 /etc/passwd 등 민감 파일 직접 접근 시 +20</p></div>
+      <div class="factor"><small>Post-Exploitation</small><p>whoami, wget, reverse shell 등 실행 흔적 발견 시 +25</p></div>
+      <div class="factor"><small>Base Score</small><p>공격 유형 자체의 고유 위험도 (아래 표)</p></div>
+    </div>
+    <div class="scoretable">
+      <div class="row head"><span>Attack Type</span><span>Base</span></div>
+      <div class="row"><span class="attack">Port / Ping Scan</span><span class="score">10</span></div>
+      <div class="row"><span class="attack">Insecure CAPTCHA</span><span class="score">15</span></div>
+      <div class="row"><span class="attack">Brute Force / CSRF / Open Redirect</span><span class="score">20</span></div>
+      <div class="row"><span class="attack">XSS</span><span class="score">40</span></div>
+      <div class="row"><span class="attack">ARP Spoofing / Session Hijacking</span><span class="score">45</span></div>
+      <div class="row"><span class="attack">Directory Traversal</span><span class="score">50</span></div>
+      <div class="row"><span class="attack">File Inclusion / DDoS</span><span class="score">55</span></div>
+      <div class="row"><span class="attack">SQL Injection</span><span class="score">70</span></div>
+      <div class="row"><span class="attack">File Upload</span><span class="score">80</span></div>
+      <div class="row"><span class="attack">Command Injection</span><span class="score">90</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><span class="idx">06</span><h2>SOAR Response Matrix</h2><span class="rule"></span></div>
+    <div class="matrix">
+      <div class="mcard low">
+        <div class="range">0–29</div><div class="level">LOW</div>
+        <div class="action">로그 저장</div><div class="sub">즉시 조치 없음. Incident History에만 기록.</div>
+      </div>
+      <div class="mcard medium">
+        <div class="range">30–59</div><div class="level">MEDIUM</div>
+        <div class="action">관리자 확인 목록 등록</div><div class="sub">SOAR Admin Console — Medium Alerts. 차단 없음.</div>
+      </div>
+      <div class="mcard high">
+        <div class="range">60–79</div><div class="level">HIGH</div>
+        <div class="action">임시 차단 (30분)</div><div class="sub">iptables DROP 자동 적용, 시간 경과 후 자동 해제.</div>
+      </div>
+      <div class="mcard critical">
+        <div class="range">80–100</div><div class="level">CRITICAL</div>
+        <div class="action">영구 차단 승인 요청</div><div class="sub">관리자 승인 시 방화벽 규칙 영구 반영 (netfilter-persistent).</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><span class="idx">07</span><h2>Live Attack Scenarios</h2><span class="rule"></span></div>
+    <p class="section-note">
+      <b style="color:var(--amber)">00번을 가장 먼저 클릭</b>해 로그인 + Security Level을 Low로 설정하세요.
+      이후 각 버튼은 공격 페이로드가 이미 담긴 URL로 즉시 이동해 그 자리에서 공격이 실행됩니다.
+    </p>
+    <div class="scenarios">
+      <a class="scenario setup" href="/dvwa/login.php">
+        <span class="step">00</span>
+        <span class="name">Login &amp; Set Security Level<small>admin / password 로그인 → DVWA Security → Low → Submit</small></span>
+        <span class="lvl setup">SETUP</span>
+        <span class="go">DVWA →</span>
+      </a>
+      <a class="scenario" href="#" onclick="alert('칼리 터미널에서 실행:\n\nsudo nmap -sS -T4 -p 1-1000 soc.target');return false;">
+        <span class="step">01</span>
+        <span class="name">Port Scan<small>네트워크 정찰 — Suricata 단독 탐지</small></span>
+        <span class="lvl low">LOW</span>
+        <span class="go">nmap →</span>
+      </a>
+      <a class="scenario" href="/dvwa/vulnerabilities/xss_r/?name=%3Cscript%3Ealert(1)%3C%2Fscript%3E">
+        <span class="step">02</span>
+        <span class="name">Reflected XSS<small>&lt;script&gt; 태그 즉시 삽입</small></span>
+        <span class="lvl medium">MEDIUM</span>
+        <span class="go">Run →</span>
+      </a>
+      <a class="scenario" href="/dvwa/vulnerabilities/fi/?page=../../../../var/log/apache2/access.log">
+        <span class="step">03</span>
+        <span class="name">Directory Traversal<small>일반 파일 접근</small></span>
+        <span class="lvl medium">MEDIUM</span>
+        <span class="go">Run →</span>
+      </a>
+      <a class="scenario" href="/dvwa/vulnerabilities/fi/?page=../../../../etc/passwd">
+        <span class="step">04</span>
+        <span class="name">Directory Traversal<small>/etc/passwd 직접 접근 — 등급 격상</small></span>
+        <span class="lvl high">HIGH</span>
+        <span class="go">Run →</span>
+      </a>
+      <a class="scenario" href="/dvwa/vulnerabilities/sqli/?id=1&Submit=Submit">
+        <span class="step">05</span>
+        <span class="name">SQL Injection<small>영구 차단 승인 요청 발생</small></span>
+        <span class="lvl critical">CRITICAL</span>
+        <span class="go">Run →</span>
+      </a>
+      <a class="scenario" href="/dvwa/vulnerabilities/exec/">
+        <span class="step">06</span>
+        <span class="name">Command Injection<small>127.0.0.1; whoami 직접 입력 필요</small></span>
+        <span class="lvl critical">CRITICAL</span>
+        <span class="go">DVWA →</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><span class="idx">08</span><h2>Log Manifest</h2><span class="rule"></span></div>
+    <div class="manifest">
+      <div class="row"><span class="k">apache.access</span><span class="v">apache/logs/access.log</span></div>
+      <div class="row"><span class="k">ssh.auth</span><span class="v">/var/log/secure</span></div>
+      <div class="row"><span class="k">ftp.access</span><span class="v">/var/log/vsftpd.log</span></div>
+      <div class="row"><span class="k">audit.events</span><span class="v">/var/log/audit/audit.log</span></div>
+      <div class="row"><span class="k">wazuh.agent</span><span class="v">/var/ossec/logs/ossec.log</span></div>
+      <div class="row"><span class="k">suricata.eve</span><span class="v">suricata/logs/eve.json</span></div>
+      <div class="row"><span class="k">soar.state</span><span class="v">soar-ai-auto/data/state.json</span></div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <a class="btn primary" href="/dvwa/">Open DVWA <span class="arrow">→</span></a>
+  </div>
+
+  <footer>
+    <span>TARGET-01 // Apache · DVWA · MariaDB · SSH · FTP · auditd · Suricata · Wazuh · SOAR AI</span>
+    <span>Mini SOC Range</span>
+  </footer>
+
+</div>
+</body>
+</html>
