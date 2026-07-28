@@ -10,7 +10,7 @@ services:
     volumes:
       - ./suricata/logs:/var/log/suricata
       - ./suricata/rules/local.rules:/etc/suricata/rules/local.rules
-    command: -i enp2s0 -S /etc/suricata/rules/local.rules
+    command: -i enp2s0 -i enp3s0 -i enp26s0 -S /etc/suricata/rules/local.rules
     restart: unless-stopped
 
   wazuh-agent:
